@@ -15,7 +15,7 @@
         <div class="container">
             <nav class="menu__desktop">
                 <ul class="menu">
-                    <li class="menu__item active"><a href="<? get_home_url(  ); ?>">Home</a></li>
+                    <li class="menu__item active"><a href="<?= get_home_url(  ); ?>">Home</a></li>
                     <li class="menu__item"><a href="#about">About Us</a></li>
                     <li class="menu__item"><a href="#team">Team</a></li>
                     <!-- <li class="menu__item"><a href="#"><img src="img/logo.png" alt="" class="logo"></a></li> -->
@@ -32,7 +32,7 @@
                     <div class="menu__burger"><span>toggle menu</span></div>
                 </div>
                 <ul class="menu">         
-                    <li class="menu__item active"><a href="<? get_home_url(  ); ?>">Home</a></li>
+                    <li class="menu__item active"><a href="<?= get_home_url(  ); ?>">Home</a></li>
                     <li class="menu__item"><a href="#about">About Us</a></li>
                     <li class="menu__item"><a href="#team">Team</a></li>
                     <li class="menu__item"><a href="#provide">Services</a></li>
@@ -43,7 +43,7 @@
             <div class="header__content">
                 <h1 class="header__title">We build it with passion</h1>
                 <p class="header__text">Just to be clear, we do this for fun not for you, just kidding.</p>
-                <a href="" class="header__button">READ MORE</a>
+                <a href="#about" class="header__button">READ MORE</a>
             </div>
         </div>
     </header> 
