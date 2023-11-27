@@ -1,15 +1,23 @@
 <!-- подключить меню из файла header.php -->
 <?php get_header(  ); ?>
 
-    <div class="about" id="about">
+    <div class="about" id="about" style="background: url(<?= CFS()->get('background_white'); ?>) center 100% repeat-x,
+    url(<?= CFS()->get('background_black'); ?>) center 100% repeat-x, #1d1d1d;">
         <div class="container">
             <div class="about__inner">
-                <div class="about__item">
-                    <div class="about__year">2011</div>
-                    <div class="about__text">Lorem ipsum dolor sit amet, consectetur adipiselit. Vivamus varius nec diam
-                        vitae hendrerit bigus mit.</div>
-                </div>
-                <div class="about__item">
+                <?php
+                $cards = CFS()->get('card');
+                foreach ($cards as $row) {
+                ?>
+                    <div class="about__item">
+                        <div class="about__year"><?= $row[ 'card_year' ] ?></div>
+                        <div class="about__text"><?= $row[ 'card_text' ] ?></div>
+                    </div>
+                    <?php
+                }
+                    ?>
+
+                <!-- <div class="about__item">
                     <div class="about__year">2012</div>
                     <div class="about__text">Lorem ipsum dolor sit amet, consectetur adipiselit. Vivamus varius nec diam
                         vitae hendrerit bigus mit.
@@ -26,44 +34,74 @@
                     <div class="about__text">Lorem ipsum dolor sit amet, consectetur adipiselit. Vivamus varius nec diam
                         vitae hendrerit bigus mit.
                         Begitus vit urna nulla.</div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
     <div class="team" id="team">
         <div class="container">
             <div class="block__head">
-                <h2 class="block__title">This is our team</h2>
-                <p class="block__text">We are small but effective and ...</p>
+                <h2 class="block__title"><?= CFS()->get('team_title'); ?></h2>
+                <p class="block__text"><?= CFS()->get('team_description'); ?></p>
             </div>
+            <!-- Карточки участников -->
             <div class="team__inner">
-                <div class="team__item">
-                    <img class="team__item-img" src="img/team1.png" alt="">
-                    <h3 class="team__item-title">Mark Once</h3>
-                    <p class="team__item-text">Designer & Front-End Developer</p>
+
+
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                </div>
+                <!-- add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+
+
+            <?php
+                $cards = CFS()->get('team_card');
+                foreach ($cards as $row) {
+                ?>
+                    <div class="team__item">
+                    <img class="team__item-img" src="<?= $row[ 'team_img' ] ?>" alt="">
+                    <h3 class="team__item-title"><?= $row[ 'team_name' ] ?></h3>
+                    <p class="team__item-text"><?= $row[ 'team_post' ] ?></p>
                     <div class="team__icon-box">
-                        <a href="#"><i class="icon-twitter"></i></a>
-                        <a href="#"><i class="icon-instagram"></i></a>
+                        <?php
+                            if(!empty($row['team_github']['url'])) {
+                                ?>
+                            <a href="<?= $row['team_github']['url'] ?>" target="<?= $row['team_github']['target']?>"><i class="icon-github-circled-alt2"></i></a>
+                                <?php
+                            }
+                                ?>
+                        
+                        <?php
+                            if(!empty($row['team_whatsapp']['url'])) {
+                                ?>
+                            <a href="<?= $row['team_whatsapp']['url'] ?>" target="<?= $row['team_whatsapp']['target']?>"><i class="icon-whatsapp"></i></a>
+                                <?php
+                            }
+                                ?>
+
+
+                        <?php
+                            if(!empty($row['team_vk']['url'])) {
+                                ?>
+                            <a href="<?= $row['team_vk']['url'] ?>" target="<?= $row['team_vk']['target']?>"><i class="icon-vkontakte"></i></a>
+                                <?php
+                            }
+                                ?>                    
+                                              
                     </div>
                 </div>
-                <div class="team__item">
-                    <img class="team__item-img" src="img/team2.png" alt="">
-                    <h3 class="team__item-title">Justin Twice</h3>
-                    <p class="team__item-text">Founder & CEO</p>
-                    <div class="team__icon-box">
-                        <a href="#"><i class="icon-twitter"></i></a>
-                        <a href="#"><i class="icon-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="team__item">
-                    <img class="team__item-img" src="img/team3.png" alt="">
-                    <h3 class="team__item-title">Antonio Never</h3>
-                    <p class="team__item-text">Someone & Somewhere</p>
-                    <div class="team__icon-box">
-                        <a href="#"><i class="icon-twitter"></i></a>
-                        <a href="#"><i class="icon-instagram"></i></a>
-                    </div>
-                </div>
+                    <?php
+                }
+                    ?>
+
             </div>
         </div>
     </div>

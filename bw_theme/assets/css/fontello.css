@@ -1,67 +1,24 @@
 @font-face {
-  font-family: "HelveticaNeueLTProLt";
-  src: url(../fonts/HelveticaNeueLTProLt.otf) format("opentype");
-}
-@font-face {
-  font-family: "HelveticaNeueLTProMd";
-  src: url(../fonts/HelveticaNeueLTProMd.otf) format("opentype");
-}
-@font-face {
-  font-family: "HelveticaNeueLTProRoman";
-  src: url(../fonts/HelveticaNeueLTProRoman.otf) format("opentype");
-}
-@font-face {
-  font-family: "Merriweather-LightItalic";
-  src: url(../fonts/Merriweather-LightItalic.ttf) format("truetype");
-}
-@font-face {
-  font-family: "Montserrat-Light";
-  src: url(../fonts/Montserrat-Light.ttf) format("truetype");
-}
-@font-face {
-  font-family: "Montserrat-Regular";
-  src: url(../fonts/Montserrat-Regular.ttf) format("truetype");
-}
-@font-face {
-  font-family: "Roboto-Regular";
-  src: url(../fonts/Roboto-Regular.ttf) format("truetype");
-}
-
-@font-face {
   font-family: "fontello";
-  src: url("../fonts/fontello.eot?40657825");
-  src: url("../fonts/fontello.eot?40657825#iefix") format("embedded-opentype"),
-    url("../fonts/fontello.woff2?40657825") format("woff2"),
-    url("../fonts/fontello.woff?40657825") format("woff"),
-    url("../fonts/fontello.ttf?40657825") format("truetype"),
-    url("../fonts/fontello.svg?40657825#fontello") format("svg");
+  src: url("../fonts/fontello.eot?10106870");
+  src: url("../fonts/fontello.eot?10106870#iefix") format("embedded-opentype"),
+    url("../fonts/fontello.woff2?10106870") format("woff2"),
+    url("../fonts/fontello.woff?10106870") format("woff"),
+    url("../fonts/fontello.ttf?10106870") format("truetype"),
+    url("../fonts/fontello.svg?10106870#fontello") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-
-/* @font-face {
-  font-family: "fontello";
-  src: url("../fonts/fontello.eot?40657825");
-  src: url("../fonts/fontello.eot?40657825#iefix") format("embedded-opentype"),
-    url("../fonts/fontello.woff2?40657825") format("woff2"),
-    url("../fonts/fontello.woff?40657825") format("woff"),
-    url("../fonts/fontello.ttf?40657825") format("truetype"),
-    url("../fonts/fontello.svg?40657825#fontello") format("svg");
-  font-weight: normal;
-  font-style: normal;
-} */
-
 /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
 /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
 /*
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello.svg?40657825#fontello') format('svg');
+    src: url('../font/fontello.svg?10106870#fontello') format('svg');
   }
 }
 */
-
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
   font-family: "fontello";
@@ -101,24 +58,27 @@
 .icon-phone:before {
   content: "\e800";
 } /* '' */
-.icon-location:before {
+.icon-mail:before {
   content: "\e801";
 } /* '' */
-.icon-heart:before {
+.icon-location:before {
   content: "\e802";
 } /* '' */
-.icon-upload-cloud-outline:before {
+.icon-chart-line:before {
   content: "\e803";
 } /* '' */
-.icon-twitter:before {
-  content: "\f099";
-} /* '' */
-.icon-mail-alt:before {
-  content: "\f0e0";
-} /* '' */
-.icon-instagram:before {
-  content: "\f16d";
-} /* '' */
-.icon-chart-line:before {
-  content: "\f201";
-} /* '' */
+.icon-heart:before {
+  content: "\e804";
+} /* '' */
+.icon-download-cloud:before {
+  content: "\f015";
+} /* '' */
+.icon-github-circled-alt2:before {
+  content: "\f056";
+} /* '' */
+.icon-whatsapp:before {
+  content: "\f232";
+} /* '' */
+.icon-vkontakte:before {
+  content: "\f354";
+} /* '' */
