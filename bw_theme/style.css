@@ -355,6 +355,7 @@ input[type="number"] {
   color: #3b3b3b;
   margin-bottom: 29px;
 }
+/*  */
 /*media for iPad*/
 @media screen and (max-width: 769px) {
   .container {
@@ -390,6 +391,7 @@ input[type="number"] {
     padding-top: 30px;
   }
 }
+/*  */
 /*media for iPhone*/
 @media screen and (max-width: 376px) {
   .container {
@@ -497,3 +499,8 @@ input[type="number"] {
     padding-top: 100px;
   }
 }
+
+/* Slider */
+/* .swiper-container {
+  width: 100%;
+} */

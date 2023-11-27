@@ -1,6 +1,7 @@
 <!-- подключить меню из файла header.php -->
 <?php get_header(  ); ?>
 
+<!-- О нас -->
     <div class="about" id="about" style="background: url(<?= CFS()->get('background_white'); ?>) center 100% repeat-x,
     url(<?= CFS()->get('background_black'); ?>) center 100% repeat-x, #1d1d1d;">
         <div class="container">
@@ -17,27 +18,11 @@
                 }
                     ?>
 
-                <!-- <div class="about__item">
-                    <div class="about__year">2012</div>
-                    <div class="about__text">Lorem ipsum dolor sit amet, consectetur adipiselit. Vivamus varius nec diam
-                        vitae hendrerit bigus mit.
-                        Begitus vit urna nulla.</div>
-                </div>
-                <div class="about__item">
-                    <div class="about__year">2013</div>
-                    <div class="about__text">Sed at auctor sem, nec tincidunt elit. Pellentesque enim turpis, porttitor
-                        ac orci in, ultrices efficitur nisl. Ut odio libero, sodales a tellus eleifend, suscipit dapibus
-                        mi.</div>
-                </div>
-                <div class="about__item">
-                    <div class="about__year">2014</div>
-                    <div class="about__text">Lorem ipsum dolor sit amet, consectetur adipiselit. Vivamus varius nec diam
-                        vitae hendrerit bigus mit.
-                        Begitus vit urna nulla.</div>
-                </div> -->
             </div>
         </div>
     </div>
+
+    <!-- Участники -->
     <div class="team" id="team">
         <div class="container">
             <div class="block__head">
@@ -48,24 +33,17 @@
             <div class="team__inner">
 
 
-            <!-- Swiper -->
+            <!-- Swiper  start-->
             <div class="swiper mySwiper">
+            <!-- <div class="swiper-container"> -->
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">Slide 1</div>
-                    <div class="swiper-slide">Slide 2</div>
-                    <div class="swiper-slide">Slide 3</div>
-                </div>
-                <!-- add Arrows -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
+                    <!-- <div class="swiper-slide"> -->
 
-
-
-            <?php
+                    <?php
                 $cards = CFS()->get('team_card');
                 foreach ($cards as $row) {
                 ?>
+                <div class="swiper-slide">
                     <div class="team__item">
                     <img class="team__item-img" src="<?= $row[ 'team_img' ] ?>" alt="">
                     <h3 class="team__item-title"><?= $row[ 'team_name' ] ?></h3>
@@ -97,14 +75,27 @@
                                 ?>                    
                                               
                     </div>
+                    </div>
                 </div>
+                
                     <?php
                 }
                     ?>
+                
+                </div>
+                <!-- add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <!-- Swiper  end   t-->
+          
 
             </div>
         </div>
     </div>
+
+    <!--   Достижения -->
     <div class="provide" id="provide">
         <div class="container">
             <div class="block__head inverse">
