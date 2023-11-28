@@ -213,12 +213,15 @@ body {
 }
 .provide__inner {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
   padding-top: 138px;
 }
 .provide__item {
   text-align: center;
-  max-width: 335px;
+  max-width: 415px;
+  width: 33%;
+  padding: 0 40px;
 }
 .provide__item i {
   color: #fff;
@@ -500,7 +503,12 @@ input[type="number"] {
   }
 }
 
-/* Slider */
-/* .swiper-container {
+/* Слайдер */
+.swiper-container {
   width: 100%;
-} */
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #000;
+}

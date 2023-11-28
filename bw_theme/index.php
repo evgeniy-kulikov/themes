@@ -6,6 +6,7 @@
     url(<?= CFS()->get('background_black'); ?>) center 100% repeat-x, #1d1d1d;">
         <div class="container">
             <div class="about__inner">
+                <!-- cycle about card -->
                 <?php
                 $cards = CFS()->get('card');
                 foreach ($cards as $row) {
@@ -95,29 +96,30 @@
         </div>
     </div>
 
-    <!--   Достижения -->
+    <!--   Услуги -->
     <div class="provide" id="provide">
         <div class="container">
             <div class="block__head inverse">
-                <h2 class="block__title">We provide you everything</h2>
-                <p class="block__text">Maybe not everything, but we provide you some stuff.</p>
+                <h2 class="block__title"><?= CFS()->get('provide_title'); ?></h2>
+                <p class="block__text"><?= CFS()->get('provide_text'); ?></p>
             </div>
             <div class="provide__inner">
+
+                <!-- start cycle provide_card -->
+            <?php
+            $cards = CFS()->get('provide_card');
+            foreach ($cards as $row) {
+            ?>
                 <div class="provide__item">
-                    <i class="icon-chart-line"></i>
-                    <h3 class="provide__item-title">Some Analytics</h3>
-                    <p class="provide__item-text">Aenean nisi lectus, convallis non lorem sit amet, rhoncus malesuada justo</p>
+                    <img src="<?= $row[ 'provide_card_image' ] ?>" alt="">
+                    <h3 class="provide__item-title"><?= $row[ 'provide_card_title' ] ?></h3>
+                    <p class="provide__item-text"><?= $row[ 'provide_card_text' ] ?></p>
                 </div>
-                <div class="provide__item">
-                    <i class="icon-heart"></i>
-                    <h3 class="provide__item-title">We provide you love</h3>
-                    <p class="provide__item-text">Aenean nisi lectus, convallis non lorem sit amet, rhoncus malesuada justo</p>
-                </div>
-                <div class="provide__item">
-                    <i class="icon-upload-cloud-outline"></i>
-                    <h3 class="provide__item-title">And Some Cloud</h3>
-                    <p class="provide__item-text">Aenean nisi lectus, convallis non lorem sit amet, rhoncus malesuada justo</p>
-                </div>
+                <?php
+            }
+                ?>
+                <!-- end cycle provide_card  -->
+                
             </div>
         </div>
     </div> 
