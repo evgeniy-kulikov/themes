@@ -70,7 +70,7 @@
                         <?php
                             if(!empty($row['team_vk']['url'])) {
                                 ?>
-                            <a href="<?= $row['team_vk']['url'] ?>" target="<?= $row['team_vk']['target']?>"><i class="icon-vkontakte"></i></a>
+                            <a href="<?= $row['team_vk']['url'] ?>" target="<?= $row['team_vk']['target']?>"><i class="icon-vkontakte-1"></i></a>
                                 <?php
                             }
                                 ?>                    
@@ -153,7 +153,7 @@
 
                     <div class="contact__item">
                         <!-- <i class="icon-mail-alt"></i> -->
-                        <i class="icon-github-circled-alt2"></i>
+                        <i class="icon-mail"></i>
                         <div class="contact__text"><a href="mailto:<?= CFS()->get('footer_email'); ?>"><?= CFS()->get('footer_email'); ?></a></div>
                     </div>
                 </div>
