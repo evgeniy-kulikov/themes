@@ -287,14 +287,15 @@ body {
   color: #4b4b4b;
   text-decoration: underline;
 }
-.contact__form {
+.wpcf7-form {
   padding-top: 153px;
   display: flex;
   flex-direction: column;
   max-width: 770px;
   margin: 0 auto;
 }
-.contact__form input {
+.wpcf7-form input {
+  width: 100%;
   height: 52px;
   padding: 20px;
   text-align: center;
@@ -305,13 +306,16 @@ body {
   color: #898888;
   border: 1px solid #999999;
 }
-.contact__name {
+.wpcf7-form .contact__name {
+  width: 100%;
   margin-bottom: 20px;
 }
-.contact__email {
+.wpcf7-form .contact__email {
+  width: 100%;
   margin-bottom: 20px;
 }
-.contact__number {
+.wpcf7-form .contact__number {
+  width: 100%;
   margin-bottom: 18px;
 }
 input::-webkit-outer-spin-button,
@@ -321,7 +325,8 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
-.contact__textarea {
+.wpcf7-form .contact__textarea {
+  width: 100%;
   padding: 22px;
   margin-bottom: 21px;
   height: 195px;
@@ -334,7 +339,8 @@ input[type="number"] {
   color: #898888;
   border: 1px solid #999999;
 }
-.contact__form .contact__button {
+.wpcf7-form .contact__button {
+  width: 100%;
   cursor: pointer;
   padding: 0;
   outline: none;
@@ -346,6 +352,8 @@ input[type="number"] {
   letter-spacing: 0.02em;
   color: #fefefe;
 }
+
+/* footer */
 .footer {
   padding-top: 154px;
 }

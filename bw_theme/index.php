@@ -126,31 +126,45 @@
     <div class="contact" id="contact">
         <div class="container">
             <div class="block__head">
-                <h2 class="block__title">Contac Us</h2>
-                <p class="block__text">We know what we need to do</p>
+                <h2 class="block__title"><?= CFS()->get('footer_title'); ?></h2>
+                <p class="block__text"><?= CFS()->get('footer_text'); ?></p>
             </div>
             <div class="contact__inner">
                 <div class="contact__icon-box">
                     <div class="contact__item">
                         <i class="icon-phone"></i>
-                        <div class="contact__text"><a href="tel:555222333">555-222-333</a></div>
+                        <div class="contact__text"><a href="<?= CFS()->get('footer_phone'); ?>"><?= CFS()->get('footer_phone'); ?></a></div>
                     </div>
+
+                    <!-- Адрес-геолокация -->
+                    <?php
+                        if(!empty($row['footer_address']['url'])) {
+                    ?>
+                        <div class="contact__item">
+                            <i class="icon-location"></i> 
+                            <div class="contact__text">
+                                <a href="<?= CFS()->get('footer_address')['footer_address']['url'] ?>" target="<?= CFS()->get('footer_address')['footer_address']['target']?>"><?= CFS()->get('footer_address')['footer_address']['text']?></a>                                
+                            </div>
+                        </div>                                
+                    <?php
+                        }
+                    ?>
+                    <!-- Адрес-геолокация end -->
+
                     <div class="contact__item">
-                        <i class="icon-location"></i> 
-                        <div class="contact__text"><a href="https://goo.gl/maps/ot9BCyYtQbSXoJYRA" target="_blank">Here is some address</a></div>
-                    </div>
-                    <div class="contact__item">
-                        <i class="icon-mail-alt"></i>
-                        <div class="contact__text"><a href="mailto:somemail@hotmail.com">somemail@hotmail.com</a></div>
+                        <!-- <i class="icon-mail-alt"></i> -->
+                        <i class="icon-github-circled-alt2"></i>
+                        <div class="contact__text"><a href="mailto:<?= CFS()->get('footer_email'); ?>"><?= CFS()->get('footer_email'); ?></a></div>
                     </div>
                 </div>
-                <form action="" class="contact__form">
+                <!-- <form action="" class="wpcf7-form">
                     <input class="contact__name" type="text" placeholder="Full Name">
                     <input class="contact__email" type="email" placeholder="Email">
                     <input class="contact__number" type="number" placeholder="Number">
                     <textarea class="contact__textarea" placeholder="Write your Message here..."></textarea>
                     <input type="submit" class="contact__button" value="Submit">
-                </form>
+                </form> -->
+                <?php the_content(); ?>
             </div>
         </div>
     </div>
